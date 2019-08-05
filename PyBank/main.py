@@ -37,3 +37,14 @@ with open(csvpath, newline='') as csvfile:
     print(f"Average Change : ${round(total_revenue/len(dates),2)}")
     print(f"Greatest Increase in Profits : {maxProfitMonth} ({maxProfit})")
     print(f"Greatest Decrease in Profits : {minProfitMonth} ({minProfit})")
+
+    #export text file - https://www.w3schools.com/python/python_file_open.asp & https://www.geeksforgeeks.org/reading-writing-text-files-python/
+    file = open('pybank_financial.txt','w')
+    file.write("Financial Analysis\n----------------------")
+    file.write("\nTotal Months: " + str(len(dates)))
+    file.write("\nTotal Revenue : $" + str(total_revenue))
+    file.write("\nAverage Change : $" + str(round(total_revenue/len(dates),2)))
+    file.write("\nGreatest Increase in Profits : " + str(maxProfitMonth) + " (" + str(maxProfit) + ")")
+    file.write("\nGreatest Decrease in Profits : " + str(minProfitMonth) + " (" + str(minProfit) + ")")
+    file.close()
+
