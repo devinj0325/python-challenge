@@ -1,7 +1,7 @@
 import os
 import csv
 
-csvpath = os.path.join("Desktop", "Github", "python-challenge","PyBank","budget_data.csv")
+csvpath = os.path.join("budget_data.csv")
 
 with open(csvpath, 'r', newline='') as csvfile:    
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -29,9 +29,9 @@ with open(csvpath, 'r', newline='') as csvfile:
             minProfitMonth = row[0]
     
     #Print
-    print("\nFinancial Analysis\n-----------------------------------------------")
-    print(f"Total Month: {len(dates)}")
-    print(f"Total Revenue : ${total_rev}")
+    print("\nFinancial Analysis\n-----------------------")
+    print(f"Total Months: {len(dates)}")
+    print(f"Total: ${total_rev}")
     print(f"Average Change : ${round(total_rev/len(dates),2)}")
     print(f"Greatest Increase in Profits : {maxProfitMonth} ({maxProfit})")
     print(f"Greatest Decrease in Profits : {minProfitMonth} ({minProfit})")
