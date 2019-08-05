@@ -1,3 +1,9 @@
+#The total number of months included in the dataset
+#The net total amount of "Profit/Losses" over the entire period
+#The average of the changes in "Profit/Losses" over the entire period
+#The greatest increase in profits (date and amount) over the entire period
+#The greatest decrease in losses (date and amount) over the entire period
+
 # import 
 import os
 import csv
@@ -34,7 +40,7 @@ with open(csvpath, newline='') as csvfile:
     print(f"Total Months: {len(dates)}")
     print(f"Total: ${total_revenue}")
     #for average use round
-    print(f"Average Change : ${round(total_revenue/len(dates),2)}")
+    print(f"Average Change : ${round(total_revenue/len(dates))}")
     print(f"Greatest Increase in Profits : {maxProfitMonth} ({maxProfit})")
     print(f"Greatest Decrease in Profits : {minProfitMonth} ({minProfit})")
 
@@ -43,7 +49,7 @@ with open(csvpath, newline='') as csvfile:
     file.write("Financial Analysis\n----------------------")
     file.write("\nTotal Months: " + str(len(dates)))
     file.write("\nTotal Revenue : $" + str(total_revenue))
-    file.write("\nAverage Change : $" + str(round(total_revenue/len(dates),2)))
+    file.write("\nAverage Change : $" + str(round(total_revenue/len(dates))))
     file.write("\nGreatest Increase in Profits : " + str(maxProfitMonth) + " (" + str(maxProfit) + ")")
     file.write("\nGreatest Decrease in Profits : " + str(minProfitMonth) + " (" + str(minProfit) + ")")
     file.close()
