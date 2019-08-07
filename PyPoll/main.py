@@ -33,6 +33,7 @@ with open(csvpath, newline='') as csvfile:
         candidateIndex = candidate.index(row[2]) #where candidate row starts
         CountVote[candidateIndex] += 1 #count from 1 
     #Print
+    #\n whitespace
     print(f"\nElection Results\n--------------------")
     print(f"Total votes: {Vote_total}")
     print("-----------------------")
@@ -51,15 +52,15 @@ with open(csvpath, newline='') as csvfile:
     print("--------------------------")
 
 file = open('output.txt','w')
-
+# \n whitespace
 #.txt output   
 file.write("Election Results")
 file.write("\n------------------------")
 file.write("\nTotal votes:" + str(Vote_total))
 file.write("\n------------------------")
-# "%"
+# "%" \n creates whitespace
 for x in range(len(candidate)):
-    votePercent = round((CountVote [x] /Vote_total)*100)
+    votePercent = round((CountVote [x] / Vote_total)*100)
     file.write("\n" + str(candidate [x] ) +" : " + str(votePercent) 
         + "% ("+ str(CountVote [x] ) + ")")
 file.write("\n-------------------------")

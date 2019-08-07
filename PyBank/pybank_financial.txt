@@ -1,4 +1,1 @@
-Financial Analysis
-----------------------
-Total Months: 86
-Total Revenue : $38382578
+Financial Analysis----------------------------Total Months: 86Total: $38382578Average Change is: $-2315.12Greatest Increase in Profits: Feb-2012  ($1170593)Greatest Decrease in Profits: Sep-2013  ($-1196225)
