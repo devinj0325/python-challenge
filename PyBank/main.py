@@ -64,8 +64,8 @@ file = open('pybank_financial.txt','w')
 file.write("Financial Analysis")
 file.write("----------------------------")
 
-file.write("Total Months: " + str(Dates))
-file.write("Total: $" + str(totalProfit))
-file.write("Average Change is: $" + str(round(averageChange, 2))) # ,2 numbers after decimal
-file.write("Greatest Increase in Profits: " + str(maxProfitMonth) + "  ($" + str(maxProfit) + ")")
-file.write("Greatest Decrease in Profits: " + str(minProfitMonth) + "  ($" + str(minProfit) + ")")
+file.write("\nTotal Months: " + str(Dates))
+file.write("\nTotal: $" + str(totalProfit))
+file.write("\nAverage Change is: $" + str(round(averageChange, 2))) # ,2 numbers after decimal
+file.write("\nGreatest Increase in Profits: " + str(maxProfitMonth) + "  ($" + str(maxProfit) + ")")
+file.write("\nGreatest Decrease in Profits: " + str(minProfitMonth) + "  ($" + str(minProfit) + ")")
